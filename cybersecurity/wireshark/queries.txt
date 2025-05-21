@@ -1,0 +1,13 @@
+!(ip.addr == 100.69.36.254)&&dns -> filters for dns not on my wifi
+
+
+Run this to enter monitor mode: sudo /Applications/Wireshark.app/Contents/MacOS/Wireshark
+
+must manually set channel in monitor mode, managed mode doesn't need this
+
+
+sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport en0 sniff 11 && open /tmp/airportSniff*.cap
+
+probe requests: wlan.fc.type_subtype == 4
+
+Old wifi address names: ARRIS-0742-5G, ARRIS-0742
